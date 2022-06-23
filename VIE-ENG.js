@@ -21,7 +21,7 @@ searchBtn.addEventListener("click", function(e){
 });
 
 async function getData(word){
-  const response = await fetch(`https://api.tracau.vn/WBBcwnwQpV89/s/${word}/en`);
+  const response = await fetch(`https://api.tracau.vn/WBBcwnwQpV89/s/${word}/vi`);
   const data = await response.json();
   console.log(data);
 
@@ -32,9 +32,7 @@ async function getData(word){
   }
 
   data.sentences.forEach((item, i) => {
-    /*const engDefinition = item.fields.en;
-    defBox[i].value += engDefinition + "\n";*/
-    const vieDefinition = item.fields.vi;
-    defBox[i].innerHTML += vieDefinition;
+    const engDefinition = item.fields.en;
+    defBox[i].innerHTML += engDefinition;
   });
 }

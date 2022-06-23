@@ -31,25 +31,16 @@ async function getData(word){
     return;
   }
 
-  //Result Found
-/*  let definition1 = data[0].meanings[0].definitions[0].definition;
-
-  if (!(data[0].meanings[4] === undefined)) {
-    let definition2 = data[0].meanings[4].definitions[0].definition;
-    defBox[1].value += JSON.stringify(definition2);
-  }
-
-  defBox[0].value += JSON.stringify(definition1);
-*/
+  //Print out definition
   data.forEach((item, i) => {
     const partOfSpeech = item.meanings[0].partOfSpeech;
     const definition = item.meanings[0].definitions[0].definition;
-    defBox[i].value = "(" + partOfSpeech + ")" + "\n" + definition;
+    defBox[i].innerHTML = "(" + partOfSpeech + ")" + "\n" + definition;
   });
 
   data[0].meanings.forEach((item, i) => {
     const partOfSpeech = item.partOfSpeech;
     const definition = item.definitions[0].definition;
-    defBox[i].value = "(" + partOfSpeech + ")" + "\n" + definition;
+    defBox[i].innerHTML = "(" + partOfSpeech + ")" + "\n" + definition;
   });
 }
