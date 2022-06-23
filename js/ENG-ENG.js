@@ -9,7 +9,7 @@ searchBtn.addEventListener("click", function(e){
 
   //clear defBox
   defBox.forEach((item, i) => {
-    item.value = "";
+    item.innerHTML = "";
   });
 
   let word = input.value;

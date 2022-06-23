@@ -9,7 +9,7 @@ searchBtn.addEventListener("click", function(e){
 
   //clear defBox
   defBox.forEach((item, i) => {
-    item.value = "";
+    item.innerHTML = "";
   });
 
   let word = input.value;
@@ -32,9 +32,7 @@ async function getData(word){
   }
 
   data.sentences.forEach((item, i) => {
-    /*const engDefinition = item.fields.en;
-    defBox[i].value += engDefinition + "\n";*/
     const vieDefinition = item.fields.vi;
-    defBox[i].innerHTML += vieDefinition;
+    defBox[i].innerHTML += "- " + vieDefinition;
   });
 }
