@@ -10,22 +10,27 @@
     </header>
 
     <div>
-      <label>ENG-VIE</label>
-      <input type="text" name="e-v" placeholder="Input a word">
+      <label>Translate</label>
+      <input type="text" name="input" placeholder="Input a word" class="input">
     </div>
     <br>
     <div>
-      <label>VIE-ENG</label>
-      <input type="text" name="v-e" placeholder="Input a word">
-    </div>
-    <br>
-    <div>
-      <label>ENG-ENG</label>
-      <input type="text" name="e-e" placeholder="Input a word">
+      <select name="language">
+        <option value="en">ENG-VIE</option>
+        <option value="vie">VIE-ENG</option>
+        <option value="en-en">ENG-ENG</option>
+      </select>
     </div>
     <br>
 
-    <button type="button" name="submit"> Submit</button>
+    <div>
+      <button type="button" name="search" class="button"> Search</button>
+    </div>
+    <br>
+
+    <div>
+      <textarea name="definition" rows="8" cols="80" class="def"></textarea>
+    </div>
 
     <script src="Dictionary.js">
     </script>
