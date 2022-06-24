@@ -43,8 +43,8 @@ async function getData(word){
     return;
   }
 
-  data.sentences.forEach((item, i) => {
-    const vieDefinition = item.fields.vi;
+  for (var i = 0; i < 5; i++) {
+    const vieDefinition = data.sentences[i].fields.vi;
     defTextField[i].innerHTML += "- " + vieDefinition;
-  });
+  }
 }

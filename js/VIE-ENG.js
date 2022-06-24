@@ -31,8 +31,8 @@ async function getData(word){
     return;
   }
 
-  data.sentences.forEach((item, i) => {
-    const engDefinition = item.fields.en;
+  for (var i = 0; i < 5; i++) {
+    const engDefinition = data.sentences[i].fields.en;
     defTextField[i].innerHTML += "- " + engDefinition;
-  });
+  }
 }
