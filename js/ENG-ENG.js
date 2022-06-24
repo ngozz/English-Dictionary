@@ -2,13 +2,14 @@ console.log("Hello");
 
 let input = document.querySelector(".input");
 let searchBtn = document.querySelector(".button");
-let defBox = document.querySelectorAll(".def");
+let defTextField = document.querySelectorAll(".def");
+let audio = document.querySelector(".audio");
 
 searchBtn.addEventListener("click", function(e){
   e.preventDefault();
 
-  //clear defBox
-  defBox.forEach((item, i) => {
+  //clear defTextField
+  defTextField.forEach((item, i) => {
     item.innerHTML = "";
   });
 
@@ -35,12 +36,19 @@ async function getData(word){
   data.forEach((item, i) => {
     const partOfSpeech = item.meanings[0].partOfSpeech;
     const definition = item.meanings[0].definitions[0].definition;
-    defBox[i].innerHTML = "(" + partOfSpeech + ")" + "\n" + definition;
+    defTextField[i].innerHTML = "(" + partOfSpeech + ")" + "\n" + definition;
   });
 
   data[0].meanings.forEach((item, i) => {
     const partOfSpeech = item.partOfSpeech;
     const definition = item.definitions[0].definition;
-    defBox[i].innerHTML = "(" + partOfSpeech + ")" + "\n" + definition;
+    defTextField[i].innerHTML = "(" + partOfSpeech + ")" + "\n" + definition;
+  });
+
+  data[0].phonetics.forEach((item, i) => {
+    if (!(item.audio === "")) {
+      audio.src = item.audio;
+      return;
+    }
   });
 }

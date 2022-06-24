@@ -2,13 +2,14 @@ console.log("Hello");
 
 let input = document.querySelector(".input");
 let searchBtn = document.querySelector(".button");
-let defBox = document.querySelectorAll(".def");
+let defTextField = document.querySelectorAll(".def");
+let audio = document.querySelector(".audio");
 
 searchBtn.addEventListener("click", function(e){
   e.preventDefault();
 
-  //clear defBox
-  defBox.forEach((item, i) => {
+  //clear defTextField
+  defTextField.forEach((item, i) => {
     item.innerHTML = "";
   });
 
@@ -21,6 +22,17 @@ searchBtn.addEventListener("click", function(e){
 });
 
 async function getData(word){
+  const audioResponse = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
+  const audioData = await audioResponse.json();
+  console.log(audioData);
+
+  audioData[0].phonetics.forEach((item, i) => {
+    if (!(item.audio === "")) {
+      audio.src = item.audio;
+      return;
+    }
+  });
+
   const response = await fetch(`https://api.tracau.vn/WBBcwnwQpV89/s/${word}/en`);
   const data = await response.json();
   console.log(data);
@@ -33,6 +45,6 @@ async function getData(word){
 
   data.sentences.forEach((item, i) => {
     const vieDefinition = item.fields.vi;
-    defBox[i].innerHTML += "- " + vieDefinition;
+    defTextField[i].innerHTML += "- " + vieDefinition;
   });
 }

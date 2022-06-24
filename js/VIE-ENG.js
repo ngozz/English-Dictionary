@@ -2,13 +2,13 @@ console.log("Hello");
 
 let input = document.querySelector(".input");
 let searchBtn = document.querySelector(".button");
-let defBox = document.querySelectorAll(".def");
+let defTextField = document.querySelectorAll(".def");
 
 searchBtn.addEventListener("click", function(e){
   e.preventDefault();
 
-  //clear defBox
-  defBox.forEach((item, i) => {
+  //clear defTextField
+  defTextField.forEach((item, i) => {
     item.innerHTML = "";
   });
 
@@ -33,6 +33,6 @@ async function getData(word){
 
   data.sentences.forEach((item, i) => {
     const engDefinition = item.fields.en;
-    defBox[i].innerHTML += "- " + engDefinition;
+    defTextField[i].innerHTML += "- " + engDefinition;
   });
 }
