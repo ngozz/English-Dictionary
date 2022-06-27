@@ -37,12 +37,6 @@ async function getData(word){
   const data = await response.json();
   console.log(data);
 
-  //Empty result
-  if (data.title === 'No Definitions Found') {
-    alert(data.message);
-    return;
-  }
-
   for (var i = 0; i < 5; i++) {
     const vieDefinition = data.sentences[i].fields.vi;
     defTextField[i].innerHTML += "- " + vieDefinition;

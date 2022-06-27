@@ -25,12 +25,6 @@ async function getData(word){
   const data = await response.json();
   console.log(data);
 
-  //Empty result
-  if (data.title === 'No Definitions Found') {
-    alert(data.message);
-    return;
-  }
-
   for (var i = 0; i < 5; i++) {
     const engDefinition = data.sentences[i].fields.en;
     defTextField[i].innerHTML += "- " + engDefinition;
