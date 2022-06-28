@@ -1,5 +1,5 @@
 console.log("Hello");
-
+console.log("Hello");
 let input = document.querySelector(".input");
 let searchBtn = document.querySelector(".button");
 let defTextField = document.querySelectorAll(".def");
