@@ -31,7 +31,7 @@ async function getData(word){
     return;
   }
 
-  data[0].meta.ants[0].forEach((item, i) => {
+  data[0].meta.syns[0].forEach((item, i) => {
     defTextField[0].innerHTML += "- " + item + "<br>";
   });
 }
