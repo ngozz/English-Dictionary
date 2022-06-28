@@ -6,15 +6,15 @@ body {
 
 a {
   text-decoration: none;
-  color: grey;
+  color: yellow;
 }
 
 a:hover {
-  color: red;
+  color: green;
 }
 
 a:active {
-  color: green;
+  color: red;
 }
 
 table {
