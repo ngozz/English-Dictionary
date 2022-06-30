@@ -9,4 +9,4 @@ Remember to **DISABLE** them after. They **WILL** break some websites.
 Antonyms and Synonyms searcher needs your own API. You can register one here: [MERRIAM-WEBSTER](https://www.dictionaryapi.com/products/api-collegiate-thesaurus)
 
 # How to run
-Run ENG-ENG.html in any browser
+Run Login.html in any browser
