@@ -8,6 +8,6 @@ searchBtn.addEventListener("click", function(e){
   
     if (username.value == "admin" && password.value == "admin"){
         alert ("Login successfully");
-        window.location = "../ENG-VIE.html"
+        window.location = "./ENG-VIE.html"
     }
 });
