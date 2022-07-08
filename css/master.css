@@ -1,16 +1,21 @@
 body {
-  background-color: #000000;
-  color:white;
+  background-color: #010101;
+  color:rgb(253, 249, 249);
   text-align: center;
 }
 
 a {
+  border: 2px solid rgb(32, 117, 202);
+  border-radius: 5px;
+  padding: 1px;
   text-decoration: none;
   color: yellow;
+  line-height: 2.5;
+  border-style: outset;
 }
 
 a:hover {
-  color: green;
+  color: rgb(110, 217, 110);
 }
 
 a:active {
