@@ -21,7 +21,7 @@ searchBtn.addEventListener("click", function(e){
 });
 
 async function getData(word){
-  const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/thesaurus/json/${word}?key=${thesaurusAPI}`);
+  const response = await fetch(`https://www.dictionaryapi.com/api/v3/references/thesaurus/json/${word}?key=c4dac1ce-0896-4629-ad45-e20a73d82822`);
   const data = await response.json();
   console.log(data);
 
