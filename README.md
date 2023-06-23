@@ -1,8 +1,4 @@
 # Web version
-https://ngozz.github.io/English-Dictionary/Login.html
-
-Note: Vietnamese Dictionary won't work, you need to download the files and follow the step below.
-
 # How to use ENG-VIE and VIE-ENG dictionaries
 Need to install and enable this extension to use ENG-VIE and VIE-ENG dictionaries: [Extension](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf)
 
@@ -18,3 +14,4 @@ Antonyms and Synonyms searcher needs your own API. You can register one here: [M
 
 # How to run
 Run Login.html in any browser
+Or use this website: https://ngozz.github.io/English-Dictionary/Login.html
