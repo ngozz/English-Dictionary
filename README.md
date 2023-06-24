@@ -9,4 +9,5 @@ Remember to **DISABLE** them after. They **WILL** break some websites.
 # How to run
 Run Login.html in any browser
 
-Or use this website: https://ngozz.github.io/English-Dictionary/Login.html
+Or use this website: 
+[Dictionary Website](https://ngozz.github.io/English-Dictionary/Login.html)
